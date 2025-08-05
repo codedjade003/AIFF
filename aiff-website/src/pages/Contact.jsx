@@ -92,10 +92,40 @@ const Contact = () => {
               <div className="mt-8">
                 <h4 className="font-semibold mb-4">Follow Us</h4>
                 <div className="flex space-x-4">
-                  {["facebook-f", "twitter", "instagram", "youtube"].map((icon, i) => (
+                  {["facebook-f"].map((icon, i) => (
                     <a
                       key={i}
-                      href="#"
+                      href="https://facebook.com/arewaintlfilmfestival"
+                      className="bg-gray-200 hover:bg-green-600 hover:text-white p-3 rounded-full transition duration-300"
+                    >
+                      <i className={`fab fa-${icon}`}></i>
+                    </a>
+                  ))}
+
+                  {["twitter"].map((icon, i) => (
+                    <a
+                      key={i}
+                      href="https://x.com/arewaintlfilmfestival"
+                      className="bg-gray-200 hover:bg-green-600 hover:text-white p-3 rounded-full transition duration-300"
+                    >
+                      <i className={`fab fa-${icon}`}></i>
+                    </a>
+                  ))}
+
+                  {["instagram"].map((icon, i) => (
+                    <a
+                      key={i}
+                      href="https://www.instagram.com/arewafilmfestival"
+                      className="bg-gray-200 hover:bg-green-600 hover:text-white p-3 rounded-full transition duration-300"
+                    >
+                      <i className={`fab fa-${icon}`}></i>
+                    </a>
+                  ))}
+
+                  {["youtube"].map((icon, i) => (
+                    <a
+                      key={i}
+                      href="https://youtube.com/arewaintlfilmfestival"
                       className="bg-gray-200 hover:bg-green-600 hover:text-white p-3 rounded-full transition duration-300"
                     >
                       <i className={`fab fa-${icon}`}></i>
