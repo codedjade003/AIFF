@@ -1,7 +1,7 @@
 // src/components/NavBar.jsx
 import { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
-import AIFFLogo from './AIFFLogo';
+import AIFFLogo from '../assets/logo.png';
 
 const NavBar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -16,7 +16,12 @@ const NavBar = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <a href="#" className="flex items-center">
-            <AIFFLogo />
+          <img
+            src={AIFFLogo}
+            alt="aifflogo"
+            className="h-[60px] object-contain"
+          />
+
           </a>
           {/* Desktop Nav */}
           <div className="hidden md:flex space-x-8">

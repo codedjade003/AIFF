@@ -1,5 +1,5 @@
 import { FaFilm, FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
-import logo from "./../assets/logo.png";
+import AIFFLogo from "./AIFFLogo";
 
 const Footer = () => {
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <img src={logo} href="#"/>
+              <AIFFLogo />
             </div>
             <p className="text-gray-400">
               Celebrating the rich cinematic heritage of Northern Nigeria and
