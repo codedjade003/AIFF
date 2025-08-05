@@ -1,0 +1,48 @@
+/* Gallery.css */
+
+.swiper-button-prev,
+.swiper-button-next {
+  border-radius: 50%;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.swiper:hover .swiper-button-prev,
+.swiper:hover .swiper-button-next {
+  opacity: 1;
+  visibility: visible;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: #facc15; /* Tailwind yellow-400 for hover */
+  color: #000;
+  border-color: #facc15;
+}
+
+.swiper-button-disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Swiper pagination customization */
+.aiff-swiper .swiper-pagination {
+  position: static; /* Let it flow below the slider */
+  margin-top: 1.5rem; /* Push it down below the content */
+  text-align: center;
+}
+
+.aiff-swiper .swiper-pagination-bullet {
+  background: grey; /* Change from blue to white */
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  border:#000
+}
+
+.aiff-swiper .swiper-pagination-bullet-active {
+  background: #22c55e; /* Tailwind green-500 (you can tweak) */
+  opacity: 1;
+  transform: scale(1.2);
+}
