@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
 const days = [
-  { id: 'day1', label: 'Day 1: Opening Ceremony', date: 'October 10, 2024' },
-  { id: 'day2', label: 'Day 2: Film Screenings', date: 'October 11, 2024' },
-  { id: 'day3', label: 'Day 3: Workshops', date: 'October 12, 2024' },
-  { id: 'day4', label: 'Day 4: Industry Panels', date: 'October 13, 2024' },
-  { id: 'day5', label: 'Day 5: Awards Night', date: 'October 14, 2024' },
+  { id: 'day1', label: 'Day 1: Opening Ceremony', date: 'November 20, 2025' },
+  { id: 'day2', label: 'Day 2: Screenings & Workshops', date: 'November 21, 2025' },
+  { id: 'day3', label: 'Day 3: Industry Panels', date: 'November 22, 2025' },
+  { id: 'day4', label: 'Day 4: Awards Night', date: 'November 23, 2025' },
 ];
+
 
 const Schedule = () => {
   const [activeDay, setActiveDay] = useState('day1');
@@ -50,104 +50,96 @@ const Schedule = () => {
           {/* Main Schedule Content */}
           <div className="md:w-3/4">
             {activeDay === 'day1' && (
-              <ScheduleDay
-                title="October 10, 2024 - Opening Ceremony"
-                events={[
-                  {
-                    time: '4:00 PM - 6:00 PM',
-                    title: 'Opening Red Carpet',
-                    location: 'Kaduna International Conference Center',
-                  },
-                  {
-                    time: '7:00 PM - 9:30 PM',
-                    title: 'Opening Film Premiere',
-                    location: '"The Northern Star" - Main Auditorium',
-                  },
-                  {
-                    time: '9:30 PM - 11:30 PM',
-                    title: 'Opening Night Reception',
-                    location: 'Festival Lounge - VIP Invitation Only',
-                  },
-                ]}
-              />
+          <ScheduleDay
+            title="November 20, 2025 - Opening Ceremony"
+            events={[
+              {
+                time: '4:00 PM - 6:00 PM',
+                title: 'Opening Red Carpet',
+                location: 'Kaduna International Conference Center',
+              },
+              {
+                time: '7:00 PM - 9:30 PM',
+                title: 'Opening Film Premiere',
+                location: '"The Northern Star" - Main Auditorium',
+              },
+              {
+                time: '9:30 PM - 11:30 PM',
+                title: 'Opening Night Reception',
+                location: 'Festival Lounge - VIP Invitation Only',
+              },
+            ]}
+          />
             )}
 
             {activeDay === 'day2' && (
-              <ScheduleDay
-                title="October 11, 2024 - Film Screenings"
-                events={[
-                  {
-                    time: '10:00 AM - 12:30 PM',
-                    title: 'Morning Screenings Block A',
-                    location: 'Auditorium 1 & 2 - Various Short Films',
-                  },
-                  {
-                    time: '2:00 PM - 4:30 PM',
-                    title: 'Afternoon Screenings Block B',
-                    location: 'Auditorium 1 - Feature Films',
-                  },
-                  {
-                    time: '6:00 PM - 9:00 PM',
-                    title: 'Evening Screenings Block C',
-                    location: 'Main Auditorium - International Selections',
-                  },
-                ]}
-              />
+            <ScheduleDay
+              title="November 21, 2025 - Screenings & Workshops"
+              events={[
+                {
+                  time: '10:00 AM - 12:30 PM',
+                  title: 'Morning Screenings Block A',
+                  location: 'Auditorium 1 & 2 - Various Short Films',
+                },
+                {
+                  time: '1:00 PM - 3:00 PM',
+                  title: 'Screenwriting for African Stories',
+                  location: 'Workshop Room B - With renowned Nigerian writers',
+                },
+                {
+                  time: '2:00 PM - 4:30 PM',
+                  title: 'Afternoon Screenings Block B',
+                  location: 'Auditorium 1 - Feature Films',
+                },
+                {
+                  time: '4:00 PM - 6:00 PM',
+                  title: 'Cinematography Masterclass',
+                  location: 'Workshop Room A - Led by award-winning cinematographer',
+                },
+                {
+                  time: '6:00 PM - 9:00 PM',
+                  title: 'Evening Screenings Block C',
+                  location: 'Main Auditorium - International Selections',
+                },
+                {
+                  time: '7:00 PM - 9:00 PM',
+                  title: 'Indie Film Financing Panel',
+                  location: 'Main Conference Hall - Producers and investors discuss funding',
+                },
+              ]}
+            />
             )}
 
             {activeDay === 'day3' && (
-              <ScheduleDay
-                title="October 12, 2024 - Workshops"
-                events={[
-                  {
-                    time: '10:00 AM - 12:00 PM',
-                    title: 'Cinematography Masterclass',
-                    location: 'Workshop Room A - Led by award-winning cinematographer',
-                  },
-                  {
-                    time: '1:00 PM - 3:00 PM',
-                    title: 'Screenwriting for African Stories',
-                    location: 'Workshop Room B - With renowned Nigerian writers',
-                  },
-                  {
-                    time: '4:00 PM - 6:00 PM',
-                    title: 'Indie Film Financing Panel',
-                    location: 'Main Conference Hall - Producers and investors discuss funding',
-                  },
-                ]}
-              />
+            <ScheduleDay
+              title="November 22, 2025 - Industry Panels"
+              events={[
+                {
+                  time: '10:00 AM - 12:30 PM',
+                  title: 'Building Film Ecosystems in Africa',
+                  location: 'Main Hall - Panel Discussion with Executives',
+                },
+                {
+                  time: '2:00 PM - 4:00 PM',
+                  title: 'Policy & Production: Bridging Gaps',
+                  location: 'Panel Room A - Government & Private Stakeholders',
+                },
+              ]}
+            />
             )}
 
             {/* Placeholder components for future days */}
             {activeDay === 'day4' && (
-              <ScheduleDay
-                title="October 13, 2024 - Industry Panels"
-                events={[
-                  {
-                    time: '10:00 AM - 12:30 PM',
-                    title: 'Building Film Ecosystems in Africa',
-                    location: 'Main Hall - Panel Discussion with Executives',
-                  },
-                  {
-                    time: '2:00 PM - 4:00 PM',
-                    title: 'Policy & Production: Bridging Gaps',
-                    location: 'Panel Room A - Government & Private Stakeholders',
-                  },
-                ]}
-              />
-            )}
-
-            {activeDay === 'day5' && (
-              <ScheduleDay
-                title="October 14, 2024 - Awards Night"
-                events={[
-                  {
-                    time: '7:00 PM - 10:00 PM',
-                    title: 'AIFF Awards Gala',
-                    location: 'Main Auditorium - Red Carpet + Ceremony',
-                  },
-                ]}
-              />
+            <ScheduleDay
+              title="November 23, 2025 - Awards Night"
+              events={[
+                {
+                  time: '7:00 PM - 10:00 PM',
+                  title: 'AIFF Awards Gala',
+                  location: 'Main Auditorium - Red Carpet + Ceremony',
+                },
+              ]}
+            />
             )}
           </div>
         </div>

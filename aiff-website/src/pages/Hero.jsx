@@ -10,7 +10,7 @@ const Hero = () => {
   });
 
   useEffect(() => {
-    const targetDate = new Date("2025-10-10T10:00:00");
+    const targetDate = new Date("2025-11-20T10:00:00");
 
     const updateCountdown = () => {
       const now = new Date();
@@ -49,9 +49,9 @@ const Hero = () => {
   <div className="absolute inset-0 bg-black/50 z-0" />
   <div className="relative z-10 max-w-7xl w-full px-4 text-center">
         <div className="mb-8">
-          <span className="bg-green-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-            October 10–15, 2025
-          </span>
+        <span className="bg-green-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+          November 20–23, 2025
+        </span>
         </div>
         <h1 className="text-4xl md:text-6xl font-bold mb-6 text-shadow-lg">
           Arewa International Film Festival
