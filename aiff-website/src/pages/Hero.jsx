@@ -62,21 +62,6 @@ const Hero = () => {
           Northern Nigeria and beyond.
         </p>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <a
-            href="#tickets"
-            className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full font-semibold transition duration-300"
-          >
-            Get Tickets
-          </a>
-          <a
-            href="#films"
-            className="border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-3 rounded-full font-semibold transition duration-300"
-          >
-            View Films
-          </a>
-        </div>
-
         {/* Countdown Timer */}
         <div className="max-w-2xl mx-auto">
           <h3 className="text-xl mb-4 text-shadow">
