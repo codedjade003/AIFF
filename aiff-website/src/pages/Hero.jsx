@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import HeroImg from "../assets/images/Hero.jpg";
+import HeroImg from "../assets/images/img_9.jpg";
 
 const Hero = () => {
   const [timeLeft, setTimeLeft] = useState({
