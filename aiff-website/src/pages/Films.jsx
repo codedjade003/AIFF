@@ -36,7 +36,7 @@ const Films = () => {
     <section id="films" className="py-20 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="section-title text-3xl md:text-4xl font-bold">Dee Dee Films on Screen</h2>
+          <h2 className="section-title text-3xl md:text-4xl font-bold">Films on Screen</h2>
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
             Celebrating powerful stories streaming on global platforms. Discover our top picks from the acclaimed Dee Dee Films catalogue.
           </p>
