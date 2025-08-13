@@ -11,10 +11,16 @@ import Submit from "./pages/Submit";
 import Workshop from "./pages/Workshop";
 import Gallery from "./pages/Gallery";
 import Layout from "./layout/Layout";
+import TermsOfService from "./pages/legal/TermsOfService";
+import CookiePolicy from "./pages/legal/CookiePolicy";
+import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
+import ScrollToHash from "./ScrollToHash"
+
 
 function App() {
   return (
     <Layout>
+    <ScrollToHash />
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
@@ -26,6 +32,10 @@ function App() {
       <Route path="/submit" element={<Submit />} />
       <Route path="/workshop" element={<Workshop />} />
       <Route path="/gallery" element={<Gallery />} />
+      <Route path="/legal/terms" element={<TermsOfService />} />
+      <Route path="/legal/privacy" element={<PrivacyPolicy />} />
+      <Route path="/legal/cookies" element={<CookiePolicy />} />
+
     </Routes>
     </Layout>
   );

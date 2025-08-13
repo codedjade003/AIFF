@@ -1,3 +1,4 @@
+import venue from "../assets/images/venue.jpg";
 const Venue = () => {
   return (
     <section id="venue" className="py-20 bg-gray-100">
@@ -14,14 +15,15 @@ const Venue = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Column */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">Kaduna International Conference Center</h3>
+            <h3 className="text-2xl font-bold mb-4">Muritala Square Arena</h3>
             <p className="text-gray-600 mb-4">
-              Located in the vibrant city of Kaduna, the conference center offers state-of-the-art
-              facilities perfect for film screenings, workshops, and networking events.
+              Located in the heart of Kaduna, Muritala Square Arena is a historic and versatile venue 
+              that hosts some of the city’s most memorable events. 
             </p>
-            <p className="text-gray-600 mb-6">
-              With multiple auditoriums, comfortable seating, and excellent acoustics, it's the ideal
-              venue to experience the best of African cinema.
+            <p className="text-gray-600 mb-6">        
+            With expansive open spaces, multiple 
+            halls, and facilities suited for film screenings, workshops, and cultural showcases, it’s 
+            the perfect setting for this year’s festival.
             </p>
 
             {/* Details */}
@@ -30,7 +32,7 @@ const Venue = () => {
                 <i className="fas fa-map-marker-alt text-green-600 mt-1 mr-3"></i>
                 <div>
                   <h4 className="font-semibold">Address</h4>
-                  <p className="text-gray-600">Murtala Mohammed Way, Kaduna, Nigeria</p>
+                  <p className="text-gray-600">Muritala Square Arena, Yar'dua Hall and the Pavilion, Kaduna, Nigeria</p>
                 </div>
               </div>
 
@@ -53,7 +55,7 @@ const Venue = () => {
 
             {/* Map Button */}
             <a
-              href="https://maps.google.com"
+              href="https://maps.app.goo.gl/ZPTCdhUNGArF9gpK9"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition duration-300"
@@ -61,18 +63,27 @@ const Venue = () => {
               <i className="fas fa-map-marked-alt mr-2"></i> Get Directions
             </a>
           </div>
+          {/* Venue Photo with Embedded Map Overlay */}
+          <div className="relative rounded-lg overflow-hidden shadow-xl">
+            {/* Venue Image */}
+            <img
+              src={venue} // replace with your actual image path
+              alt="Muritala Square Arena"
+              className="w-full h-96 object-cover"
+            />
 
-          {/* Map Embed */}
-          <div className="rounded-lg overflow-hidden shadow-xl">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.105365518647!2d7.432215314794676!3d10.51474739248385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104d3568e8e0c3a1%3A0x4e1c3a3e1a3e1a3e!2sKaduna%20International%20Conference%20Centre!5e0!3m2!1sen!2sng!4v1620000000000!5m2!1sen!2sng"
-              width="100%"
-              height="400"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              title="Kaduna Map"
-            ></iframe>
+            {/* Map Overlay */}
+            <div className="absolute bottom-4 right-4 w-48 h-32 border-4 border-white rounded-lg overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3922.568117829547!2d7.4411130000000005!3d10.534642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDMyJzA0LjciTiA3wrAyNicyOC4wIkU!5e0!3m2!1sen!2sng!4v1755120931733!5m2!1sen!2sng"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                title="Muritala Square Arena"
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>

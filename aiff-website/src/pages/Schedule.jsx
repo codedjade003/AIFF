@@ -56,7 +56,7 @@ const Schedule = () => {
               {
                 time: '4:00 PM - 6:00 PM',
                 title: 'Opening Red Carpet',
-                location: 'Kaduna International Conference Center',
+                location: 'Muritala Square Arena',
               },
               {
                 time: '7:00 PM - 9:30 PM',

@@ -1,4 +1,45 @@
+import { useState } from "react";
+
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState(""); // for success/error message
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prev) => ({ ...prev, [id]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      // Example submission to Formspree — replace with your own endpoint
+      const res = await fetch("https://formspree.io/f/mblkzbpv", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setStatus("Message sent successfully!");
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        setStatus("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus("Network error. Try again later.");
+    }
+  };
+
   return (
     <section id="contact" className="py-20 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4">
@@ -11,7 +52,7 @@ const Contact = () => {
 
         <div className="grid md:grid-cols-2 gap-12">
           {/* Form */}
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={handleSubmit}>
             {[
               { id: "name", label: "Full Name", type: "text" },
               { id: "email", label: "Email Address", type: "email" },
@@ -24,6 +65,9 @@ const Contact = () => {
                 <input
                   type={type}
                   id={id}
+                  required
+                  value={formData[id]}
+                  onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                 />
               </div>
@@ -36,6 +80,9 @@ const Contact = () => {
               <textarea
                 id="message"
                 rows="5"
+                required
+                value={formData.message}
+                onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
               ></textarea>
             </div>
@@ -46,6 +93,8 @@ const Contact = () => {
             >
               Send Message
             </button>
+
+            {status && <p className="text-sm text-center text-green-700">{status}</p>}
           </form>
 
           {/* Contact Info */}
@@ -56,19 +105,9 @@ const Contact = () => {
               <div className="space-y-6">
                 {[
                   {
-                    icon: "map-marker-alt",
-                    title: "Address",
-                    text: "Arewa Film Festival Office, 123 Cinema Road, Kaduna, Nigeria",
-                  },
-                  {
                     icon: "envelope",
                     title: "Email",
                     text: "info@arewafilmfest.com",
-                  },
-                  {
-                    icon: "phone-alt",
-                    title: "Phone",
-                    text: "+234 812 345 6789",
                   },
                   {
                     icon: "clock",
@@ -105,7 +144,7 @@ const Contact = () => {
                   {["twitter"].map((icon, i) => (
                     <a
                       key={i}
-                      href="https://x.com/arewaintlfilmfestival"
+                      href="https://x.com/AiffN32830?t=ltCu6e1jDRjEEe4TvtODQg&s=09"
                       className="bg-gray-200 hover:bg-green-600 hover:text-white p-3 rounded-full transition duration-300"
                     >
                       <i className={`fab fa-${icon}`}></i>
@@ -116,16 +155,6 @@ const Contact = () => {
                     <a
                       key={i}
                       href="https://www.instagram.com/arewafilmfestival"
-                      className="bg-gray-200 hover:bg-green-600 hover:text-white p-3 rounded-full transition duration-300"
-                    >
-                      <i className={`fab fa-${icon}`}></i>
-                    </a>
-                  ))}
-
-                  {["youtube"].map((icon, i) => (
-                    <a
-                      key={i}
-                      href="https://youtube.com/arewaintlfilmfestival"
                       className="bg-gray-200 hover:bg-green-600 hover:text-white p-3 rounded-full transition duration-300"
                     >
                       <i className={`fab fa-${icon}`}></i>
