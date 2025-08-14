@@ -76,7 +76,7 @@ const Footer = () => {
             <ul className="space-y-2 text-gray-400">
               <li className="flex items-start">
                 <FaEnvelope className="mt-1 mr-3 text-green-500" />
-                <span>info@arewafilmfest.com</span>
+                <span>info@arewafilmfestival.com</span>
               </li>
             </ul>
           </div>

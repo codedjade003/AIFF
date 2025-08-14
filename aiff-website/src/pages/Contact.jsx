@@ -107,7 +107,7 @@ const Contact = () => {
                   {
                     icon: "envelope",
                     title: "Email",
-                    text: "info@arewafilmfest.com",
+                    text: "info@arewafilmfestival.com",
                   },
                   {
                     icon: "clock",
