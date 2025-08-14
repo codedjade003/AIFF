@@ -18,13 +18,17 @@ const NavBar = () => {
   ];
 
   const handleNavClick = (id) => {
+    // Close menu first for smoother feel
+    setMobileOpen(false);
+
     if (location.pathname !== "/") {
       navigate(`/#${id}`);
     } else {
       const el = document.getElementById(id);
-      if (el) el.scrollIntoView({ behavior: "smooth" });
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
     }
-    setMobileOpen(false);
   };
 
   return (
@@ -32,8 +36,12 @@ const NavBar = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <img src={AIFFLogo} alt="aifflogo" className="h-[60px] object-contain" />
+          <Link to="/" onClick={() => setMobileOpen(false)} className="flex items-center">
+            <img
+              src={AIFFLogo}
+              alt="aifflogo"
+              className="h-[60px] object-contain"
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -54,6 +62,7 @@ const NavBar = () => {
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="text-gray-800 focus:outline-none"
+              aria-label="Toggle Menu"
             >
               <FaBars className="text-2xl" />
             </button>
@@ -63,16 +72,18 @@ const NavBar = () => {
 
       {/* Mobile Nav */}
       {mobileOpen && (
-        <div className="md:hidden bg-white w-full px-4 pb-4">
-          {navLinks.map((link) => (
-            <button
-              key={link.id}
-              onClick={() => handleNavClick(link.id)}
-              className="nav-link py-2 text-gray-800 hover:text-yellow-600 text-left"
-            >
-              {link.name}
-            </button>
-          ))}
+        <div className="md:hidden bg-white w-full px-4 pb-4 mobile-menu transition-all duration-300 ease-in-out">
+          <div className="flex flex-col space-y-3">
+            {navLinks.map((link) => (
+              <button
+                key={link.id}
+                onClick={() => handleNavClick(link.id)}
+                className="nav-link py-2 text-gray-800 hover:text-yellow-600 text-left"
+              >
+                {link.name}
+              </button>
+            ))}
+          </div>
         </div>
       )}
     </nav>

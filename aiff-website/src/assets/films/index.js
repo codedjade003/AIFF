@@ -1,11 +1,11 @@
-import matiAZazzau from './mati-a-zazzau.png';
-import aLotLikeLove from './a-lot-like-love.png';
-import thePlan from './the-plan.png';
+import rariya from './rariya.jpg';
+import sahelArtFilm from './sahel-art-film.jpg';
+import sahelianFilm from './sahelian-film.jpg';
 
 const filmImages = {
-  'Mati a Zazzau': matiAZazzau,
-  'A Lot Like Love': aLotLikeLove,
-  'The Plan': thePlan
+  'Sahel: Art and Empires on the Shores of the Sahara': sahelArtFilm,
+  'Rariya': rariya,
+  'Sahel: The Perfect Storm': sahelianFilm
 };
 
 export default filmImages;
